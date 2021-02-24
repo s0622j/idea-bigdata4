@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias type="com.cn.springmybatis.domain.User" alias="_User" />
+        <typeAlias type="com.cn.springmybatis.domain.Order" alias="_Order" />
+        <typeAlias type="com.cn.springmybatis.domain.Item" alias="_Item" />
+    </typeAliases>
+
+    <!--引入映射文件-->
+    <mappers>
+        <!--<mapper resource="com/cn/mybatisdemo/domain/UserMapper.xml"/>-->
+        <mapper resource="UserMapper.xml"/>
+        <mapper resource="orderMapper.xml"/>
+    </mappers>
+</configuration>
