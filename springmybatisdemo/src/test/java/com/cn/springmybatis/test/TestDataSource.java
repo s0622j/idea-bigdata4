@@ -26,7 +26,7 @@ public class TestDataSource {
         UserService us = (UserService)ac.getBean("userService");
 
         User u = new User();
-        u.setName("yangsailin");
+        u.setName("ww");
         u.setAge(18);
         us.insert(u);
 

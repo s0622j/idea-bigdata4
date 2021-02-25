@@ -32,7 +32,7 @@
     <!--test数据源-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/mybatis?user=root&amp;password=root" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/mybatis?user=root&amp;password=root&amp;useSSL=false" />
         <property name="user" value="root" />
         <property name="password" value="root" />
         <property name="maxPoolSize" value="10" />
