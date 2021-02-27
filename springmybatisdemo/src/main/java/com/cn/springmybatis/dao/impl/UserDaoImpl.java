@@ -1,5 +1,6 @@
-package com.cn.springmybatis.dao;
+package com.cn.springmybatis.dao.impl;
 
+import com.cn.springmybatis.dao.BaseDao;
 import com.cn.springmybatis.domain.Order;
 import com.cn.springmybatis.domain.User;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
@@ -12,7 +13,7 @@ import java.util.List;
  */
 
 @Repository
-public class UserDao extends SqlSessionDaoSupport implements BaseDao<User> {
+public class UserDaoImpl extends SqlSessionDaoSupport implements BaseDao<User> {
 
 
     public void insert(User user) {

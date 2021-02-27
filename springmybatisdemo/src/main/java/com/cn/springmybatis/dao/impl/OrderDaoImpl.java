@@ -1,5 +1,6 @@
-package com.cn.springmybatis.dao;
+package com.cn.springmybatis.dao.impl;
 
+import com.cn.springmybatis.dao.BaseDao;
 import com.cn.springmybatis.domain.Order;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;
@@ -11,7 +12,7 @@ import java.util.List;
  */
 
 @Repository
-public class OrderDao extends SqlSessionDaoSupport implements BaseDao<Order> {
+public class OrderDaoImpl extends SqlSessionDaoSupport implements BaseDao<Order> {
     public void insert(Order order) {
 
     }
