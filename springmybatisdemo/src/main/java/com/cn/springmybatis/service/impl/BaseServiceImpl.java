@@ -23,6 +23,7 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 
     public void delete(Integer id) {
         dao.delete(id);
+        throw new RuntimeException("出错了！！！");
     }
 
     public T selectOne(Integer id) {

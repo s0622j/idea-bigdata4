@@ -11,6 +11,10 @@
         update users set name = #{name} , age = #{age} where id = #{id}
     </update>
 
+    <delete id="delete" parameterType="int">
+        delete from users where id = #{id}
+    </delete>
+
     <!--查一个-->
     <select id="selectOne" parameterType="int" resultType="_User">
         select * from users where id = #{id}

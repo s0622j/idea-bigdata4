@@ -13,6 +13,7 @@
     <mappers>
         <!--<mapper resource="com/cn/mybatisdemo/domain/UserMapper.xml"/>-->
         <mapper resource="UserMapper.xml"/>
-        <mapper resource="orderMapper.xml"/>
+        <mapper resource="OrderMapper.xml"/>
+        <mapper resource="ItemMapper.xml"/>
     </mappers>
 </configuration>
