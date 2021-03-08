@@ -12,4 +12,8 @@ public interface BaseDao<T> {
     public void delete(Integer id);
     public T selectOne(Integer id);
     public List<T> selectAll();
+
+    public List<T> selectPage(int offset,int len);
+
+    public int selectCount();
 }

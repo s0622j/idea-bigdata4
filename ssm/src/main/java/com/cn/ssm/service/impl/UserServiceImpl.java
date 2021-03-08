@@ -9,6 +9,7 @@ import com.cn.ssm.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  *
@@ -40,6 +41,17 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
         this.delete(1);
 
     };
+
+    public void save(User u) {
+        if(u.getId() != null){
+            this.update(u);
+        }
+        else{
+            this.insert(u);
+        }
+    }
+
+
 
     //    //注入指定的dao
 //    @Resource(name = "userDao")

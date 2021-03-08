@@ -34,4 +34,12 @@ public class ItemDaoImpl extends SqlSessionDaoSupport implements BaseDao<Item> {
     public List<Item> selectAll() {
         return null;
     }
+
+    public List<Item> selectPage(int offset, int len) {
+        return null;
+    }
+
+    public int selectCount() {
+        return 0;
+    }
 }

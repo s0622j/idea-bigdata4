@@ -57,4 +57,18 @@
           left join orders o
             on u.id = o.uid
     </select>
+
+    <!-- selectPage -->
+    <select id="selectPage" resultType="_User">
+      select
+        *
+      from users u limit #{offset},#{limit}
+    </select>
+
+    <!-- selectPage -->
+    <select id="selectCount" resultType="int">
+      select
+        count(1)
+      from users u
+    </select>
 </mapper>

@@ -3,6 +3,7 @@ package com.cn.ssm.dao.impl;
 
 import com.cn.ssm.dao.BaseDao;
 import com.cn.ssm.domain.User;
+import org.apache.ibatis.session.RowBounds;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;
 
@@ -34,5 +35,13 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements BaseDao<User> {
 
     public List<User> selectAll() {
         return getSqlSession().selectList("users.selectAll2");
+    }
+
+    public List<User> selectPage(int offset, int len) {
+        return getSqlSession().selectList("users.selectPage",new RowBounds(offset, len));
+    }
+
+    public int selectCount() {
+        return getSqlSession().selectOne("users.selectCount");
     }
 }

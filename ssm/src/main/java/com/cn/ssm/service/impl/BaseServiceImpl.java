@@ -10,6 +10,10 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 
     private BaseDao<T> dao;
 
+    public BaseDao<T> getDao() {
+        return dao;
+    }
+
     public void setDao(BaseDao<T> dao){
         this.dao = dao;
     }
@@ -24,7 +28,7 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 
     public void delete(Integer id) {
         dao.delete(id);
-        throw new RuntimeException("出错了！！！");
+//        throw new RuntimeException("出错了！！！");
     }
 
     public T selectOne(Integer id) {
@@ -33,5 +37,16 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 
     public List<T> selectAll() {
         return dao.selectAll();
+    }
+
+    /**
+     * 分页查询
+     */
+    public List<T> selectPage(int offset, int len){
+        return dao.selectPage(offset,len);
+    }
+
+    public int selectCount() {
+        return dao.selectCount();
     }
 }

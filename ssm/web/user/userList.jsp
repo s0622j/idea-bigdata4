@@ -34,6 +34,21 @@
         <td><a href='<c:url value="/user/editUser?uid=${u.id}" /> '>修改</a></td>
       </tr>
     </c:forEach>
+
+    <tr>
+      <td colspan="5" style="text-align: right">
+        <c:forEach begin="1" end="${pages}" step="1" var="i">
+          <c:if test="${i == param.pn}">
+            [<c:out value="${i}"/>]&nbsp;&nbsp;
+          </c:if>
+          <c:if test="${i != param.pn}">
+            <a href='<c:url value="/user/findPage?pn=${i}" />'><c:out value="${i}"/></a>&nbsp;&nbsp;
+          </c:if>
+
+        </c:forEach>
+      </td>
+    </tr>
+
   </table>
 
   <%--<table id="t2" border="1px" class="t-1">--%>

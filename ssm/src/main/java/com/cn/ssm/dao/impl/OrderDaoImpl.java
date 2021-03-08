@@ -33,4 +33,12 @@ public class OrderDaoImpl extends SqlSessionDaoSupport implements BaseDao<Order>
     public List<Order> selectAll() {
         return null;
     }
+
+    public List<Order> selectPage(int offset, int len) {
+        return null;
+    }
+
+    public int selectCount() {
+        return 0;
+    }
 }
